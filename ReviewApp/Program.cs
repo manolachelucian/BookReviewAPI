@@ -21,6 +21,7 @@ namespace ReviewApp
             builder.Services.AddScoped<IBookInterface, BookRepository>();
             builder.Services.AddScoped<IAuthorInterface, AuthorRepository>();
             builder.Services.AddScoped<IGenereInterface, GenereRepository>();
+            builder.Services.AddScoped<IUserInterface, UserRepository>();
 
             // Add Swagger for API documentation
             builder.Services.AddEndpointsApiExplorer();

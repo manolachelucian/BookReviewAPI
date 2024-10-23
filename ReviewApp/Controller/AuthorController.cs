@@ -56,8 +56,8 @@ namespace ReviewApp.Controller
             return Ok(author);
         }
 
-        [HttpGet("{authorId}/books")]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Book>))]
+        [HttpGet("books/{authorId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Author>))]
         [ProducesResponseType(404)]
 
         public IActionResult GetAuthorByBook(int authorId)

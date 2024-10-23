@@ -11,6 +11,9 @@ namespace ReviewApp.AutoHelper
             CreateMap<Book, BookDto>();
             CreateMap<Author, AuthorDto>();
             CreateMap<Generes, GenereDto>();
+            CreateMap<User, UserDto>();
+            CreateMap<Review, ReviewDto>();
+            
         }
     }
 }

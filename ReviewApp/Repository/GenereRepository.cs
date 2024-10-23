@@ -27,10 +27,7 @@ namespace ReviewApp.Repository
             return dataContext.Genres.Where(g => g.Id == id).FirstOrDefault();
         }
 
-        public Generes GetGenere(string name)
-        {
-            return dataContext.Genres.Where(g => g.NameGenere == name).FirstOrDefault();
-        }
+        
 
         public ICollection<Generes> GetGeneres()
         {
