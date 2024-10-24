@@ -32,6 +32,7 @@ Tento projekt je RESTful API postavené na ASP.NET Core, určené pro správu kn
 - ** AutoMapper
 - ** SQL Server
 - ** .NET 8
+- ** MVC Architektura
 
 ## Instalace
 ```bash
