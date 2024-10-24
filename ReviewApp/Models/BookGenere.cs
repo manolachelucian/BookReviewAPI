@@ -1,5 +1,8 @@
 ﻿namespace ReviewApp.Models
 {
+    /// <summary>
+    /// Entity model representing an BookGenere the system.
+    /// </summary>
     public class BookGenere
     {
         public int BookId { get; set; }

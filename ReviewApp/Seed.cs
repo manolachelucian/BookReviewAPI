@@ -3,15 +3,26 @@ using ReviewApp.Models;
 
 namespace ReviewApp
 {
+
+    /// <summary>
+    /// Class responsible for seeding initial data into the database context.
+    /// </summary>
     public class Seed
     {
         private readonly DataContext _dataContext;
 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Seed"/> class.
+        /// </summary>
+        /// <param name="context">The database context to be seeded.</param>
         public Seed(DataContext context)
         {
             this._dataContext = context;
         }
-
+        /// <summary>
+        /// Seeds the database context with initial data, if the tables are empty.
+        /// </summary>
         public void SeedDataContext()
         {
             if (!_dataContext.BookAuthors.Any() && !_dataContext.BookGeneres.Any() && !_dataContext.Reviews.Any() && !_dataContext.Users.Any())

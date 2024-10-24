@@ -22,6 +22,7 @@ namespace ReviewApp
             builder.Services.AddScoped<IAuthorInterface, AuthorRepository>();
             builder.Services.AddScoped<IGenereInterface, GenereRepository>();
             builder.Services.AddScoped<IUserInterface, UserRepository>();
+            builder.Services.AddScoped<IReviewInterface, ReviewRepository>();
 
             // Add Swagger for API documentation
             builder.Services.AddEndpointsApiExplorer();
@@ -36,7 +37,9 @@ namespace ReviewApp
             if (args.Length == 1 && args[0].ToLower() == "seeddata")
                 SeedData(app);
 
-            void SeedData(IHost app)
+
+            
+            static void SeedData(IHost app)
             {
                 var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
 
@@ -46,9 +49,6 @@ namespace ReviewApp
                     service.SeedDataContext();
                 }
             }
-
-
-
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

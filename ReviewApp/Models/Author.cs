@@ -1,5 +1,8 @@
 ﻿namespace ReviewApp.Models
 {
+    /// <summary>
+    /// Entity model representing an author in the system.
+    /// </summary>
     public class Author
     {
         public int Id { get; set; }

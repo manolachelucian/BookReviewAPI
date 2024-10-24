@@ -3,8 +3,17 @@ using ReviewApp.Models;
 
 namespace ReviewApp.Data
 {
+    /// <summary>
+    /// DataContext class for configuring the database context.
+    /// This class handles the DbSets (tables) for Reviews, Authors, Books, Genres, Users, and many-to-many relationships between Books and Authors, and Books and Generes.
+    /// Inherits from the Entity Framework's <see cref="DbContext"/>.
+    /// </summary>
     public class DataContext : DbContext
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataContext"/> class with the provided DbContext options.
+        /// </summary>
+        /// <param name="options">Options for configuring the context.</param>
         public DataContext(DbContextOptions<DataContext> options ): base(options)
         {
 
@@ -21,7 +30,10 @@ namespace ReviewApp.Data
         public DbSet<BookGenere> BookGeneres { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
 
-
+        /// <summary>
+        /// Configures the relationships and constraints for the models using Fluent API.
+        /// </summary>
+        /// <param name="modelBuilder">Provides a simple API for configuring models.</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Many to Many Book Author

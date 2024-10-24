@@ -26,6 +26,7 @@ namespace ReviewApp.Controller
 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Book>))]
+        [ProducesResponseType(404)]
 
         public IActionResult GetBooks()
         {
