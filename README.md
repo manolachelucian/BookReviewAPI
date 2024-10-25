@@ -3,6 +3,8 @@
 Tento projekt je RESTful API postavené na ASP.NET Core, určené pro správu knih, autorů, uživatelů a recenzí pro platformu recenzí knih. Využívá Entity Framework Core pro interakci s databází a používá vzor repozitáře k oddělení logiky od přístupu k datům.
 
 ## Funkce
+- **Správa Autoru**: vytváření, aktualizace, mazání a získávání dat
+- **Správa žánru**: vytváření, aktualizace, mazání a získávání dat
 - **Správa uživatelů**: Vytváření, aktualizace, mazání a získávání dat uživatelů.
 - **Správa knih**: Správa knih, autorů a žánrů, včetně jejich propojení (many-to-many vztahy).
 - **Správa recenzí**: Uživatelé mohou přidávat recenze ke knihám, které se ukládají a zobrazují.
