@@ -9,16 +9,6 @@ Tento projekt je RESTful API postavené na ASP.NET Core, určené pro správu kn
 - **Seedování dat**: Poskytnuta je třída Seed, která naplní databázi počátečními daty.
 - **AutoMapper**: Používá se k mapování mezi modely domény a DTO.
 - **Dependency Injection**: Služby, jako jsou repozitáře a třída Seed, jsou injektovány pomocí vestavěného dependency injection v ASP.NET Core.
-
-## API Endpoints
-- **GET /api/users**: Získání seznamu všech uživatelů.
-- **GET /api/users/{userId}**: Získání konkrétního uživatele podle ID.
-- **POST /api/users**: Vytvoření nového uživatele.
-- **PUT /api/users/{userId}**: Aktualizace údajů konkrétního uživatele.
-- **DELETE /api/users/{userId}**: Smazání uživatele podle ID.
-- **GET /api/users/review/{userId}**: Získání všech recenzí od konkrétního uživatele.
-
-
 ## Struktura projektu
 - DataContext: Definuje databázový kontext a vztahy mezi entitami.
 - Repositoria: Poskytují vrstvu pro přístup a manipulaci s daty v databázi.
